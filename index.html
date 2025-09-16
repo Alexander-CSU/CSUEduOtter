@@ -490,6 +490,58 @@
         <li class="c7 c18 li-bullet-0"><span class="c12">Full service educational materials, website and app
                 development, for educators, instructors, and learners</span></li>
     </ul>
+
+    <section id="services" style="padding: 40px; background: #f9fafb;">
+  <h2 style="font-size: 2rem; margin-bottom: 20px;">Our Services & Training Impact</h2>
+  <p style="max-width: 700px; margin-bottom: 30px;">
+    We provide expert-led training in Networking, Cyber Security, Microsoft Server Administration, 
+    and Physics. Below is a demonstration of how our students improve after completing our program.
+  </p>
+
+  <canvas id="trainingChart" width="600" height="400"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('trainingChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Networking', 'Cyber Security', 'MS Server Admin', 'Physics'],
+        datasets: [
+          {
+            label: 'Before Training',
+            data: [55, 50, 58, 52], // simulated scores %
+            backgroundColor: 'rgba(239,68,68,0.7)' // red-ish
+          },
+          {
+            label: 'After Training',
+            data: [85, 88, 83, 87], // simulated scores %
+            backgroundColor: 'rgba(34,197,94,0.7)' // green-ish
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: {
+            display: true,
+            text: 'Average Test Scores (Sample Size: 20)'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            title: { display: true, text: 'Score (%)' }
+          }
+        }
+      }
+    });
+  </script>
+</section>
+
+    
     <ul class="c26 lst-kix_med4gzt7calq-1 start">
         <li class="c7 c9 li-bullet-0"><span class="c6">Flash Cards</span></li>
         <li class="c7 c9 li-bullet-0"><span class="c6">Slide Decks</span></li>
@@ -641,6 +693,7 @@
 </body>
 
 </html>
+
 
 
 
